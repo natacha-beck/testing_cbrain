@@ -57,8 +57,8 @@
         <section>
           <h3>Why?</h3>
           <ul>
-            <li>Confidence of the code, for us but also for external collaborator</li>
-            <li>People are more confident to contibut to an open source project with a testing suite</li>
+            <li>Confidence of the code, for us but also for external collaborators</li>
+            <li>People are more confident to contribute to an open source project with a testing suite</li>
           </ul>
         </section>
 
@@ -68,16 +68,16 @@
             <li>Start in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
             <li>Tarek's presentation about <a href="https://docs.google.com/presentation/d/1W05LTOWD9XLbTKcUnVuOIrZLMbUZTR66jKEt72T0ZAI/edit?usp=sharing">BDD</a></li>
             <li>Natacha's presentation about <a href="https://docs.google.com/presentation/d/1BsHC2f5CJ4vqa82LxpEyE78AksTvIsvaq9VGouSRIhU/edit?usp=sharing">Continuous integration</a>(CI)</li>
-            <li>Documenation available on <a href="https://github.com/aces/cbrain/wiki/Testing-Suite">GitHub</a></li>
+            <li>Documentation available on <a href="https://github.com/aces/cbrain/wiki/Testing-Suite">GitHub</a></li>
           </ul>
         </section>
 
         <section>
           <h3>Original setup</h3>
           <ul>
-            <li>Run all the testing suite before commiting something</li>
+            <li>Every developers should run the testing suite before commiting something</li>
             <li>Fix buggy test or code if needed</li>
-            <li>Add new tests if new logic added to CBRAIN</li>
+            <li>Add new tests if new logic has been added to CBRAIN</li>
             <li>Complete the testing suite, <a href="https://rubygems.org/gems/rcov/versions/1.0.0">RCOV</a> was used to monitor the coverage</li>
           </ul>
         </section>
@@ -85,8 +85,9 @@
         <section>
           <h3>Original setup</h3>
           <ul>
-            <li>Never really follow the previous rules</li>
-            <li>The testing suite was fix not on a regular basis</li>
+            <li>Follow the previous rules at the beginning</li>
+            <li>And...</li>
+            <li>The test suite was not fixed on a regular basis</li>
             <li>Fixed buggy tests or code occasionally (public release)</li>
           </ul>
         </section>
@@ -94,7 +95,7 @@
         <section>
           <h3>Daily run</h3>
           <ul>
-            <li>A daily task was add by Pierre to:</li>
+            <li>A daily task was added by Pierre to:</li>
             <ul>
               <li>Run the testing suite on a VM</li>
               <li>Log the result on Nagios</li>
@@ -107,8 +108,8 @@
         <section>
           <h3>Improvements</h3>
           <ul>
-            <li>Natacha added test for the API (2014)</li>
-            <li>Remy improved the speed of the testing suite (2015)</li>
+            <li>Natacha added tests for the API (2014)</li>
+            <li>Remy improved the speed of the test suite (2015)</li>
             <li>Tristan (A.A) added test for Boutiques/CBRAIN integration (2016)</li>
           </ul>
         </section>
@@ -116,7 +117,7 @@
         <section>
           <h3><a href="travis-ci.org">Travis</a></h3>
           <ul>
-            <li>A hosted, distributed CI service ti build and test projects hosted on GitHub</li>
+            <li>A hosted, distributed CI service to build and test projects hosted on GitHub</li>
             <li>Open source project may be tested at no charge</li>
             <li>Already used by <a href="https://travis-ci.org/aces/Loris">Loris</a> and <a href="https://travis-ci.org/aces/brainbrowser">BrainBrowser</a></li>
           </ul>
@@ -137,12 +138,12 @@
             <li>If Travis CI has been activated for a repository, GitHub will notify it for every new commit/pull request</li>
             <li>Can be configured for specific branches</li>
             <li>It will check the specific branch and run the command in ".travis.yml"</li>
-            <li>That build the software and run the automated test</li>
+            <li>This one generally build the software and run the automated test</li>
           </ul>
         </section>
 
         <section>
-          <h3>Travis, 1st version</h3>
+          <h3>Travis, <a href="a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
           <ul>
             <li>Based on <a href=https://github.com/glatard/cbrain/tree/docker_updates>Tristan and Ludovic work</a></li>
             <li>This one allow to deploy a full CBRAIN (Portal/Bourreau/DataProvider)</li>
