@@ -57,15 +57,15 @@
         <section>
           <h3>Why?</h3>
           <ul>
-            <li>Confidence of the code, for us but also for external collaborators</li>
-            <li>People are more confident to contribute to an open source project with a testing suite</li>
+            <li>Confidence in the code, for us but also for external collaborators</li>
+            <li>People are more confident contributing to an open source project with a testing suite</li>
           </ul>
         </section>
 
         <section>
           <h3>Original setup</h3>
           <ul>
-            <li>Start in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
+            <li>Started in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
             <li>Tarek's presentation about <a href="https://docs.google.com/presentation/d/1W05LTOWD9XLbTKcUnVuOIrZLMbUZTR66jKEt72T0ZAI/edit?usp=sharing">BDD</a></li>
             <li>Natacha's presentation about <a href="https://docs.google.com/presentation/d/1BsHC2f5CJ4vqa82LxpEyE78AksTvIsvaq9VGouSRIhU/edit?usp=sharing">Continuous integration</a>(CI)</li>
             <li>Documentation available on <a href="https://github.com/aces/cbrain/wiki/Testing-Suite">GitHub</a></li>
@@ -75,7 +75,7 @@
         <section>
           <h3>Original setup</h3>
           <ul>
-            <li>Every developers should run the testing suite before commiting something</li>
+            <li>Every developer should run the testing suite before commiting something</li>
             <li>Fix buggy test or code if needed</li>
             <li>Add new tests if new logic has been added to CBRAIN</li>
             <li>Complete the testing suite, <a href="https://rubygems.org/gems/rcov/versions/1.0.0">RCOV</a> was used to monitor the coverage</li>
@@ -109,7 +109,7 @@
           <h3>Improvements</h3>
           <ul>
             <li>Natacha added tests for the API (2014)</li>
-            <li>Remy improved the speed of the test suite (2015)</li>
+            <li>Remi improved the speed of the test suite (2015)</li>
             <li>Tristan (A.A) added test for Boutiques/CBRAIN integration (2016)</li>
           </ul>
         </section>
@@ -126,9 +126,9 @@
         <section>
           <h3><a href="travis-ci.org">Travis</a></h3>
           <ul>
-            <li>Configured by added ".travis.yml" file, to the root of GitHub repository</li>
-            <li>This one specifies the programming language</li>
-            <li>the desired building/the testing environment...</li>
+            <li>Configured by adding ".travis.yml" file to the root of GitHub repository</li>
+            <li>Specifies the programming language</li>
+            <li>the desired building/testing environment...</li>
           </ul>
         </section>
 
@@ -137,20 +137,20 @@
           <ul>
             <li>If Travis CI has been activated for a repository, GitHub will notify it for every new commit/pull request</li>
             <li>Can be configured for specific branches</li>
-            <li>It will check the specific branch and run the command in ".travis.yml"</li>
-            <li>This one generally build the software and run the automated test</li>
+            <li>It will check the specific branch and run the commands in ".travis.yml"</li>
+            <li>Generally build the software and run the automated test</li>
           </ul>
         </section>
 
         <section>
           <h3>Travis, <a href="a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
           <ul>
-            <li>Based on <a href=https://github.com/glatard/cbrain/tree/docker_updates>Tristan and Ludovic work</a></li>
-            <li>This one allow to deploy a full CBRAIN (Portal/Bourreau/DataProvider)</li>
+            <li>Based on <a href=https://github.com/glatard/cbrain/tree/docker_updates>Tristan and Ludovic's work</a></li>
+            <li>Allows deploying a full CBRAIN (Portal/Bourreau/DataProvider)</li>
             <li>Was able to add the logic to run the testing suite via Travis</li>
-            <li>Too complicate use docker-compose build multiple container</li>
-            <li>Build and rebuild some "fix" part of CBRAIN for example ruby and RoR installation</li>
-            <li>Take ~12min</li>
+            <li>Too complicated to use docker-compose to build multiple containers</li>
+            <li>Build/rebuild fixed parts of CBRAIN (eg. Ruby and Rails installation)</li>
+            <li>Takes ~12min</li>
           </ul>
         </section>
 
@@ -158,25 +158,25 @@
         <section>
           <h3>Travis, <a href="https://github.com/aces/cbrain/commit/8487f80bd5c29337ee85e2f91e0dde8e05b719f1">2nd version</a></h3>
           <ul>
-            <li>Based on an existing container that contain the portal and only pull the last version of CBRAIN</li>
-            <li>Still compose with a container that contain the DB</li>
-            <li>Take ~6min</li>
+            <li>Based on an existing container that contains the portal and only pulls the last version of CBRAIN</li>
+            <li>Still composes with a container that contains the DB</li>
+            <li>Takes ~6min</li>
           </ul>
         </section>
 
         <section>
           <h3><a href="https://github.com/aces/cbrain/commit/3b343d5acc4489471651568397a24a5cd03fd0a4">Travis and Slack</a></h3>
           <ul>
-            <li>Create a Slack Channel for the notification</li>
-            <li><a href="https://github.com/aces/cbrain/commit/6240d2000a3745dc85baa97f408334ad5f2c9e09">Add Slack notification for different repo</a></li>
+            <li>Created a Slack Channel for the notifications</li>
+            <li><a href="https://github.com/aces/cbrain/commit/6240d2000a3745dc85baa97f408334ad5f2c9e09">Add Slack notifications for different repos</a></li>
           </ul>
         </section>
 
         <section>
           <h3>Travis, <a href="https://github.com/aces/cbrain/commit/c8845fdcb2367495357dd0acfed650892f1b292d">3rd version</a></h3>
           <ul>
-            <li>Add bourreau side test, a.k.a Boutiques/CBRAIN testing suite</li>
-            <li>Take 5min</li>
+            <li>Add bourreau side tests, a.k.a Boutiques/CBRAIN testing suite</li>
+            <li>Takes ~5min</li>
           </ul>
         </section>
 
@@ -184,10 +184,10 @@
         <section>
           <h3>Travis, <a href="https://github.com/aces/cbrain/commit/d0d882a3e6d339b4955314eaafdf6b89befb012a">4th version</a></h3>
           <ul>
-            <li>All in one, version</li>
-            <li>Only one container with everything in it included the DB</li>
+            <li>All-in-one, version</li>
+            <li>Only one container with everything in it including the DB</li>
             <li>The DB is now seeded in the main container it is no longer an other container</li>
-            <li>Take ~4min</li>
+            <li>Takes ~4min</li>
           </ul>
         </section>
 
@@ -205,7 +205,7 @@
           <ul>
             <li>Complete/Add tests if needed</li>
             <li>Add coverage tools</li>
-            <li>Closer look to Tristan and Ludovic work in order to be able to deploy CBRAIN via docker container</li>
+            <li>Closer look at Tristan and Ludovic work in order to be able to deploy CBRAIN via docker container</li>
           </ul>
         </section>
 
