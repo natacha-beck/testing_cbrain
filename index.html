@@ -46,7 +46,8 @@
 
         <!-- 1st slide-->
         <section>
-          <h2>Testing <a href="https://github.com/aces/cbrain">CBRAIN</a>, the full history.</h2>
+          <h2>Testing <a href="https://github.com/aces/cbrain">CBRAIN</a></h2>
+          <h2>the full history</h2>
           <p>
             <small><a href="https://github.com/natacha-beck/">Natacha Beck</a></small>
           </p>
@@ -54,9 +55,17 @@
         </section>
 
         <section>
+          <h3>Why?</h3>
+          <ul>
+            <li>Confidence of the code, for us but also for external collaborator</li>
+            <li>People are more confident to contibut to an open source project with a testing suite</li>
+          </ul>
+        </section>
+        
+        <section>
           <h3>The original setup</h3>
           <ul>
-            <li>Start in 2011 by using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
+            <li>Start in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
             <li>Tarek's presentation about <a href="https://docs.google.com/presentation/d/1W05LTOWD9XLbTKcUnVuOIrZLMbUZTR66jKEt72T0ZAI/edit?usp=sharing">BDD</a></li>
             <li>Natacha's presentation about <a href="https://docs.google.com/presentation/d/1BsHC2f5CJ4vqa82LxpEyE78AksTvIsvaq9VGouSRIhU/edit?usp=sharing">Continuous integration</a>(CI)</li>
           </ul>
@@ -65,17 +74,57 @@
         <section>
           <h3>The original setup</h3>
           <ul>
-            <li>Run all the testing suite before commiting something
+            <li>Run all the testing suite before commiting something</li>
             <li>Fix buggy test or code if needed</li>
             <li>Add new tests if new logic added to CBRAIN</li>
-            <li>Complete the testing suite, RCOV was used to monitor the coverage</li>
+            <li>Complete the testing suite, <a href="https://rubygems.org/gems/rcov/versions/1.0.0">RCOV</a> was used to monitor the coverage</li>
           </ul>
         </section>
 
         <section>
           <h3>The original setup</h3>
+          <ul>
+            <li>Never really follow the previous rules</li>
+            <li>The testing suite was fix not on a regular basis</li>
+            <li>Fixed buggy test or code occasionally (public release)</li>
+          </ul>
         </section>
 
+        <section>
+          <h3>Run the testing suite every day</h3>
+          <ul>
+            <li>A daily task was add by Pierre to:</li>
+            <ul>
+              <li>Run the testing suite on a VM</li>
+              <li>Log the result on Nagios</li>
+            </ul>
+            <li>This task increase our "focus" on the tests for a while</li>
+            <li>Systematic failures start to happened and once again we lost the "focus"</li>
+          </ul>  
+        </section>
+        
+        <section>
+          <h3>Some improvements</h3>
+          <li>Natacha added test for the API (2014)</li>
+          <li>Remy improved the speed of the testing suite (2015)</li>
+          <li>Tristan (A.A) added test for Boutiques/CBRAIN integration (2016)</li>
+        </section>
+        
+        <section>
+          <h3></h3>
+          <ul>
+            <li></li>
+          </ul>
+        <section>
+          
+        
+        <section>
+          <h3></h3>
+          <ul>
+            <li></li>
+          </ul>
+        <section>
+          
         <!-- Thanks -->
         <section>
           <h2>Thanks!</h2>
