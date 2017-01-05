@@ -160,6 +160,11 @@ body {
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
 
+.reveal .nobordertransparent {
+  border: none;
+  background: transparent;
+}
+
 /*********************************************
  * CONTROLS
  *********************************************/

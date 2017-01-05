@@ -47,7 +47,8 @@
         <!-- 1st slide-->
         <section>
           <h2>Testing <a href="https://github.com/aces/cbrain">CBRAIN</a></h2>
-          <h2>the full history</h2>
+          <h4>the full history</h4>
+          <img class="nobordertransparent" id="cb_logo" src="img/cbrain.png">
           <p>
             <small><a href="https://github.com/natacha-beck/">Natacha Beck</a></small>
           </p>
@@ -64,8 +65,13 @@
 
         <section>
           <h3>Original setup</h3>
+          <li>Started in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
+          <img class="nobordertransparent" id="rspec_logo" src="img/rspec.png">
+        </section>
+
+        <section>
+          <h3>Original setup</h3>
           <ul>
-            <li>Started in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
             <li>Tarek's presentation about <a href="https://docs.google.com/presentation/d/1W05LTOWD9XLbTKcUnVuOIrZLMbUZTR66jKEt72T0ZAI/edit?usp=sharing">BDD</a></li>
             <li>Natacha's presentation about <a href="https://docs.google.com/presentation/d/1BsHC2f5CJ4vqa82LxpEyE78AksTvIsvaq9VGouSRIhU/edit?usp=sharing">Continuous integration</a>(CI)</li>
             <li>Documentation available on <a href="https://github.com/aces/cbrain/wiki/Testing-Suite">GitHub</a></li>
@@ -74,11 +80,41 @@
 
         <section>
           <h3>Original setup</h3>
+          <pre style='color:#000000;background:#ffffff;'>describe DataProvider<span style='color:#800000; font-weight:bold; '> do</span>
+  let<span style='color:#808030; '>(</span>:<span style='color:#005fd2; '>provider</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span> create<span style='color:#808030; '>(</span>:<span style='color:#005fd2; '>data_provider</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>}</span>
+  let<span style='color:#808030; '>(</span>:<span style='color:#005fd2; '>userfile</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span> mock_model<span style='color:#808030; '>(</span>Userfile<span style='color:#808030; '>,</span> :<span style='color:#005fd2; '>name</span> <span style='color:#808030; '>=</span>> <span style='color:#0000e6; '>"userfile_double"</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>}</span>
+
+  describe <span style='color:#0000e6; '>"#is_alive?"</span><span style='color:#800000; font-weight:bold; '> do</span>
+    <span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span>
+  <span style='color:#800000; font-weight:bold; '>end</span>
+  describe <span style='color:#0000e6; '>"#cache_prepare"</span><span style='color:#800000; font-weight:bold; '> do</span>
+    it <span style='color:#0000e6; '>"should raise an exception if not online"</span><span style='color:#800000; font-weight:bold; '> do</span>
+      provider<span style='color:#808030; '>.</span>online <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>false</span>
+      expect<span style='color:#808030; '>(</span>lambda<span style='color:#800080; '>{</span> provider<span style='color:#808030; '>.</span>cache_prepare<span style='color:#808030; '>(</span>userfile<span style='color:#808030; '>)</span> <span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>to
+        raise_error<span style='color:#808030; '>(</span>CbrainError<span style='color:#808030; '>,</span> <span style='color:#0000e6; '>"Error: provider </span><span style='color:#000000; background:#ffffe8; '>#{provider</span><span style='color:#808030; background:#ffffe8; '>.</span><span style='color:#400000; background:#ffffe8; '>name</span><span style='color:#000000; background:#ffffe8; '>}</span><span style='color:#0000e6; '> is offline."</span><span style='color:#808030; '>)</span>
+    <span style='color:#800000; font-weight:bold; '>end</span>
+    it <span style='color:#0000e6; '>"should raise an exception if read only"</span><span style='color:#800000; font-weight:bold; '> do</span>
+       provider<span style='color:#808030; '>.</span>read_only <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>true</span>
+       expect<span style='color:#808030; '>(</span>lambda<span style='color:#800080; '>{</span>provider<span style='color:#808030; '>.</span>cache_prepare<span style='color:#808030; '>(</span>userfile<span style='color:#808030; '>)</span><span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>to
+         raise_error<span style='color:#808030; '>(</span>CbrainError<span style='color:#808030; '>,</span> <span style='color:#0000e6; '>"Error: provider </span><span style='color:#000000; background:#ffffe8; '>#{provider</span><span style='color:#808030; background:#ffffe8; '>.</span><span style='color:#400000; background:#ffffe8; '>name</span><span style='color:#000000; background:#ffffe8; '>}</span><span style='color:#0000e6; '> is read_only."</span><span style='color:#808030; '>)</span>
+    <span style='color:#800000; font-weight:bold; '>end</span>
+    it <span style='color:#0000e6; '>"should ensure that the cache is ready to be modified"</span>
+    it <span style='color:#0000e6; '>"should raise an exception if passed a string argument"</span>
+    it <span style='color:#0000e6; '>"should find the cache root"</span>
+    it <span style='color:#0000e6; '>"should create the subdirectory if it does not exist"</span>
+    it <span style='color:#0000e6; '>"should not attempt to create the subdirectory if it already exists"</span>
+  <span style='color:#800000; font-weight:bold; '>end</span>
+<span style='color:#800000; font-weight:bold; '>end</span>
+</pre>
+        </section>
+
+        <section>
+          <h3>Original setup</h3>
           <ul>
             <li>Every developer should run the testing suite before commiting something</li>
             <li>Fix buggy test or code if needed</li>
             <li>Add new tests if new logic has been added to CBRAIN</li>
-            <li>Complete the testing suite, <a href="https://rubygems.org/gems/rcov/versions/1.0.0">RCOV</a> was used to monitor the coverage</li>
+            <li>Complete the testing suite, <a href="https://rubygems.org/gems/rcov/versions/1.0.0">Rcov</a> was used to monitor the coverage</li>
           </ul>
         </section>
 
@@ -116,10 +152,16 @@
 
         <section>
           <h3><a href="travis-ci.org">Travis</a></h3>
+          <img class="nobordertransparent" id="travis_logo" src="img/travis.jpeg">
+        </section>
+
+        <section>
+          <h3><a href="travis-ci.org">Travis</a></h3>
           <ul>
             <li>A hosted, distributed CI service to build and test projects hosted on GitHub</li>
             <li>Open source project may be tested at no charge</li>
-            <li>Already used by <a href="https://travis-ci.org/aces/Loris">Loris</a> and <a href="https://travis-ci.org/aces/brainbrowser">BrainBrowser</a></li>
+            <li>Already used by <a href="https://travis-ci.org/aces/Loris">Loris</a> and by <a href="https://travis-ci.org/aces/brainbrowser">BrainBrowser</a></li>
+              <img class="nobordertransparent" id="loris_bb_logo" src="img/loris_bb.png">
           </ul>
         </section>
 
@@ -130,26 +172,30 @@
             <li>Specifies the programming language</li>
             <li>the desired building/testing environment...</li>
           </ul>
+          <img class="nobordertransparent" id="travis_yml" src="img/travis_yml.png">
         </section>
 
         <section>
           <h3><a href="travis-ci.org">Travis</a></h3>
           <ul>
             <li>If Travis CI has been activated for a repository, GitHub will notify it for every new commit/pull request</li>
-            <li>Can be configured for specific branches</li>
+            <li>Can be configured for specific branches (for master and dev on CBRAIN)</li>
             <li>It will check the specific branch and run the commands in ".travis.yml"</li>
-            <li>Generally build the software and run the automated test</li>
           </ul>
         </section>
 
         <section>
-          <h3>Travis, <a href="a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
           <ul>
             <li>Based on <a href=https://github.com/glatard/cbrain/tree/docker_updates>Tristan and Ludovic's work</a></li>
             <li>Allows deploying a full CBRAIN (Portal/Bourreau/DataProvider)</li>
             <li>Was able to add the logic to run the testing suite via Travis</li>
             <li>Too complicated to use docker-compose to build multiple containers</li>
-            <li>Build/rebuild fixed parts of CBRAIN (eg. Ruby and Rails installation)</li>
+            <li>Always start from a blank slate:</li>
+            <ul>
+              <li>Build/rebuild fixed parts of CBRAIN (eg. Ruby and Rails installation)</li>
+              <li>Always reconstruct the database</li>
+            </ul>
             <li>Takes ~12min</li>
           </ul>
         </section>
@@ -168,7 +214,7 @@
           <h3><a href="https://github.com/aces/cbrain/commit/3b343d5acc4489471651568397a24a5cd03fd0a4">Travis and Slack</a></h3>
           <ul>
             <li>Created a Slack Channel for the notifications</li>
-            <li><a href="https://github.com/aces/cbrain/commit/6240d2000a3745dc85baa97f408334ad5f2c9e09">Add Slack notifications for different repos</a></li>
+            <img class="nobordertransparent" id="slack_logo" src="img/slack.png">
           </ul>
         </section>
 
@@ -186,7 +232,7 @@
           <ul>
             <li>All-in-one, version</li>
             <li>Only one container with everything in it including the DB</li>
-            <li>The DB is now seeded in the main container it is no longer an other container</li>
+            <li>The DB is now seeded in the main container it is no longer in a separate container</li>
             <li>Takes ~4min</li>
           </ul>
         </section>
@@ -205,7 +251,6 @@
           <ul>
             <li>Complete/Add tests if needed</li>
             <li>Add coverage tools</li>
-            <li>Closer look at Tristan and Ludovic work in order to be able to deploy CBRAIN via docker container</li>
           </ul>
         </section>
 
