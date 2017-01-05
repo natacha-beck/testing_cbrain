@@ -66,7 +66,7 @@
 
         <section>
           <h3>Original setup</h3>
-          <li>Started in 2011, using <a href="http://rspec.info/">RSpec</a> a behavior-driven development (BDD) framework for Ruby</li>
+          <li>Started in 2011, using <a href="http://rspec.info/">RSpec</a>, a behavior-driven development (BDD) framework for Ruby</li>
           <img class="nobordertransparent" id="rspec_logo" src="img/rspec.png">
         </section>
 
@@ -143,13 +143,13 @@
               <li>Run the testing suite on a VM</li>
               <li>Log the result on Nagios</li>
             </ul>
-            <li>It increase our "focus" on the tests for a while</li>
-            <li>But.. Systematic failures start to happened and once again we lost the "focus"</li>
+            <li>It increased our "focus" on the tests for a while</li>
+            <li>But... systematic failures start to happened and once again we lost the "focus"</li>
           </ul>
         </section>
 
         <section>
-          <h3>Improvements</h3>
+          <h3>Improvements to the original setup</h3>
           <ul>
             <li>Natacha added tests for the API (2014)</li>
             <li>Remi improved the speed of the test suite (2015)</li>
@@ -168,7 +168,7 @@
             <li>A hosted, distributed CI service to build and test projects hosted on GitHub</li>
             <li>Open source project may be tested at no charge</li>
             <li>Already used by <a href="https://travis-ci.org/aces/Loris">Loris</a> and by <a href="https://travis-ci.org/aces/brainbrowser">BrainBrowser</a></li>
-              <img class="nobordertransparent" id="loris_bb_logo" src="img/loris_bb.png">
+              <img class="nobordertransparent" style="background: white" id="loris_bb_logo" src="img/loris_bb.png">
           </ul>
         </section>
 
@@ -186,8 +186,9 @@
           <h3><a href="travis-ci.org">Travis</a></h3>
           <ul>
             <li>If Travis CI has been activated for a repository, GitHub will notify it for every new commit/pull request</li>
-            <li>Can be configured for specific branches (for master and dev on CBRAIN)</li>
-            <li>It will check the specific branch and run the commands in ".travis.yml"</li>
+            <li>Can be configured for specific branches (for <b>master</b> and <b>dev</b> on CBRAIN)</li>
+            <li>Launch a VM </li>
+            <li>It will check out the specific branch and run the commands in ".travis.yml"</li>
           </ul>
         </section>
 
@@ -197,7 +198,6 @@
             <li>Based on <a href=https://github.com/glatard/cbrain/tree/docker_updates>Tristan and Ludovic's work</a></li>
             <li>Allows deploying a full CBRAIN (Portal/Bourreau/DataProvider)</li>
             <li>Was able to add the logic to run the testing suite via Travis</li>
-            <li>Too complicated to use docker-compose to build multiple containers</li>
             <li>Always start from a blank slate:</li>
             <ul>
               <li>Build/rebuild fixed parts of CBRAIN (eg. Ruby and Rails installation)</li>
@@ -245,6 +245,11 @@
         </section>
 
         <section>
+          <h3>Travis-CI</h3>
+          <img class="nobordertransparent" id="cbrain_travis" src="img/cbrain_travis.png">
+        </section>
+
+        <section>
           <h3>Conclusion</h3>
           <ul>
             <li>Quick to run</li>
@@ -265,6 +270,7 @@
         <section>
           <h2>Thanks!</h2>
           <ul>
+            <li>A special thanks to <a href="https://github.com/prioux">Pierre Rioux</a> for the diagrams</li>
             <li><a href="mailto:natacha.beck@mcgill.ca">natacha.beck@mcgill.ca</a></li>
             <li><a target="_blank" href="http://mcin-cnim.ca/">www.mcin-ncim.ca</a></li>
           </ul>
