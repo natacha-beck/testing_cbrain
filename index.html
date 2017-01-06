@@ -46,8 +46,8 @@
 
         <!-- 1st slide-->
         <section>
-          <h2>Testing <a href="https://github.com/aces/cbrain">CBRAIN</a></h2>
-          <img class="nobordertransparent" id="cb_logo" src="img/cbrain.png">
+          <h2>Testing</h2>
+          <a href="https://github.com/aces/cbrain"><img class="nobordertransparent" id="cb_logo" src="img/cbrain.png"></a>
           <h4>the full history</h4>
           <br>
           <p>
@@ -76,6 +76,24 @@
             <li>Tarek's presentation about <a href="https://docs.google.com/presentation/d/1W05LTOWD9XLbTKcUnVuOIrZLMbUZTR66jKEt72T0ZAI/edit?usp=sharing">BDD</a></li>
             <li>Natacha's presentation about <a href="https://docs.google.com/presentation/d/1BsHC2f5CJ4vqa82LxpEyE78AksTvIsvaq9VGouSRIhU/edit?usp=sharing">Continuous integration</a>(CI)</li>
             <li>Documentation available on <a href="https://github.com/aces/cbrain/wiki/Testing-Suite">GitHub</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Original setup</h3>
+          <ul>
+            <li><b>Ruby *</b></li>
+            <li><b>CBRAIN code *</b></li>
+            <li><b>Bundle *</b></li>
+            <ul>
+              <li><b>Rails *</b></li>
+              <li><b>Gem *</b></li>
+            </ul>
+            <li><b>MySQL *</b></li>
+            <li>Schema load or migration (Setup/update the DB)</li>
+            <li><b>Setup the configuration files *</b></li>
+            <li>Install/update CBRAIN plugins</li>
+            <li>Run RSpec</li>
           </ul>
         </section>
 
@@ -193,7 +211,7 @@
         </section>
 
         <section>
-          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a> (~12min)</h3>
           <ul>
             <li>Based on <a href=https://github.com/glatard/cbrain/tree/docker_updates>Tristan and Ludovic's work</a></li>
             <li>Allows deploying a full CBRAIN (Portal/Bourreau/DataProvider)</li>
@@ -203,18 +221,60 @@
               <li>Build/rebuild fixed parts of CBRAIN (eg. Ruby and Rails installation)</li>
               <li>Always reconstruct the database</li>
             </ul>
-            <li>Takes ~12min</li>
           </ul>
         </section>
 
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <img class="nobordertransparent" id="travis-1a" src="img/evolution/travis-1a.png">
+        </section>
 
         <section>
-          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/8487f80bd5c29337ee85e2f91e0dde8e05b719f1">2nd version</a></h3>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <img class="nobordertransparent" id="travis-1b" src="img/evolution/travis-1b.png">
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <img class="nobordertransparent" id="travis-1c" src="img/evolution/travis-1c.png">
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <img class="nobordertransparent" id="travis-1d" src="img/evolution/travis-1d.png">
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <img class="nobordertransparent" id="travis-1e" src="img/evolution/travis-1e.png">
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/a1a84057889a29375bd5e91a756f75a9fd7ec7be">1st version</a></h3>
+          <img class="nobordertransparent" id="travis-1f" src="img/evolution/travis-1f.png">
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/8487f80bd5c29337ee85e2f91e0dde8e05b719f1">2nd version</a> (~5min)</h3>
+          <img class="nobordertransparent" id="travis-2" src="img/evolution/travis-2.png">
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/c8845fdcb2367495357dd0acfed650892f1b292d">3rd version</a> (~6min)</h3>
           <ul>
-            <li>Based on an existing container that contains the portal and only pulls the last version of CBRAIN</li>
-            <li>Still composes with a container that contains the DB</li>
-            <li>Takes ~6min</li>
+            <li>Add bourreau side tests, a.k.a Boutiques/CBRAIN testing suite</li>
+            <li>Takes ~5min</li>
           </ul>
+        </section>
+
+        <section>
+          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/d0d882a3e6d339b4955314eaafdf6b89befb012a">4th version</a> (~4min)</h3>
+          <img class="nobordertransparent" id="travis-4" src="img/evolution/travis-4.png">
+        </section>
+
+        <section>
+          <h3>Travis-CI</h3>
+          <img class="nobordertransparent" id="cbrain_travis" src="img/cbrain_travis.png">
         </section>
 
         <section>
@@ -223,30 +283,6 @@
             <li>Created a Slack Channel for the notifications</li>
             <img class="nobordertransparent" id="slack_logo" src="img/slack.png">
           </ul>
-        </section>
-
-        <section>
-          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/c8845fdcb2367495357dd0acfed650892f1b292d">3rd version</a></h3>
-          <ul>
-            <li>Add bourreau side tests, a.k.a Boutiques/CBRAIN testing suite</li>
-            <li>Takes ~5min</li>
-          </ul>
-        </section>
-
-
-        <section>
-          <h3>Travis, <a href="https://github.com/aces/cbrain/commit/d0d882a3e6d339b4955314eaafdf6b89befb012a">4th version</a></h3>
-          <ul>
-            <li>All-in-one, version</li>
-            <li>Only one container with everything in it including the DB</li>
-            <li>The DB is now seeded in the main container it is no longer in a separate container</li>
-            <li>Takes ~4min</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Travis-CI</h3>
-          <img class="nobordertransparent" id="cbrain_travis" src="img/cbrain_travis.png">
         </section>
 
         <section>
